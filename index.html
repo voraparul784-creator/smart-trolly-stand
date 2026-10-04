@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Trolley Stand | Live Monitoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">🛒</div>
+    <div>
+      <h1 data-en="SMART TROLLEY" data-gu="સ્માર્ટ ટ્રોલી">SMART TROLLEY</h1>
+      <p data-en="Intelligent Stand Monitoring System" data-gu="ઇન્ટેલિજન્ટ ટ્રોલી સ્ટેન્ડ મોનિટરિંગ સિસ્ટમ">Intelligent Stand Monitoring System</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button id="langBtn" class="secondary">ગુજરાતી</button>
+    <button id="connectBtn" class="primary">Connect Arduino</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <span class="badge" data-en="SCIENCE EXHIBITION PROJECT" data-gu="વિજ્ઞાન પ્રદર્શન પ્રોજેક્ટ">SCIENCE EXHIBITION PROJECT</span>
+      <h2 data-en="Live Trolley Stand Monitoring" data-gu="ટ્રોલી સ્ટેન્ડનું લાઇવ મોનિટરિંગ">Live Trolley Stand Monitoring</h2>
+      <p data-en="IR sensors detect whether a trolley is present at each stand." data-gu="IR સેન્સર દરેક સ્ટેન્ડમાં ટ્રોલી હાજર છે કે નહીં તે શોધે છે.">IR sensors detect whether a trolley is present at each stand.</p>
+    </div>
+    <div class="connection" id="connectionStatus">
+      <span class="dot offline"></span>
+      <span data-en="Arduino disconnected" data-gu="Arduino કનેક્ટ નથી">Arduino disconnected</span>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span class="icon">🛒</span>
+      <div><small data-en="Trolleys Available" data-gu="ઉપલબ્ધ ટ્રોલી">Trolleys Available</small><strong id="available">0</strong></div>
+    </div>
+    <div class="stat-card">
+      <span class="icon">📍</span>
+      <div><small data-en="Trolleys In Use" data-gu="વપરાશમાં ટ્રોલી">Trolleys In Use</small><strong id="inUse">0</strong></div>
+    </div>
+    <div class="stat-card">
+      <span class="icon">🏪</span>
+      <div><small data-en="Total Stands" data-gu="કુલ સ્ટેન્ડ">Total Stands</small><strong id="total">10</strong></div>
+    </div>
+    <div class="stat-card">
+      <span class="icon">⏱️</span>
+      <div><small data-en="Last Update" data-gu="છેલ્લું અપડેટ">Last Update</small><strong id="lastUpdate">--:--:--</strong></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h3 data-en="Trolley Stand Map" data-gu="ટ્રોલી સ્ટેન્ડ મેપ">Trolley Stand Map</h3>
+        <p data-en="Green = trolley present • Red = trolley missing" data-gu="લીલો = ટ્રોલી હાજર • લાલ = ટ્રોલી નથી">Green = trolley present • Red = trolley missing</p>
+      </div>
+      <button id="demoBtn" class="secondary">Demo Mode</button>
+    </div>
+    <div id="stands" class="grid"></div>
+  </section>
+
+  <section class="info">
+    <h3 data-en="How the system works" data-gu="સિસ્ટમ કેવી રીતે કામ કરે છે">How the system works</h3>
+    <div class="steps">
+      <div><b>1</b><span data-en="IR sensor detects trolley" data-gu="IR સેન્સર ટ્રોલી શોધે છે">IR sensor detects trolley</span></div>
+      <div><b>2</b><span data-en="Arduino reads the sensors" data-gu="Arduino સેન્સર વાંચે છે">Arduino reads the sensors</span></div>
+      <div><b>3</b><span data-en="USB sends live data" data-gu="USB દ્વારા લાઇવ ડેટા આવે છે">USB sends live data</span></div>
+      <div><b>4</b><span data-en="Website updates instantly" data-gu="વેબસાઇટ તરત અપડેટ થાય છે">Website updates instantly</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Smart Trolley • Arduino + IR Sensor</span>
+  <span data-en="Built for science exhibition prototype" data-gu="વિજ્ઞાન પ્રદર્શનના પ્રોટોટાઇપ માટે">Built for science exhibition prototype</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
